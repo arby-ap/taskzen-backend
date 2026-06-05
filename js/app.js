@@ -96,7 +96,7 @@ form.addEventListener("submit", (e) => {
 
 // RENDER FUNCTION
 function renderTasks() {
-  list.innerHTML = "";
+  list.innerHTML = '';
 
   tasks.forEach(t => {
     const li = document.createElement("li");
@@ -108,22 +108,32 @@ function renderTasks() {
       Due: ${t.dueDate || "N/A"}
     `;
 
+    // ✅ BUTTON CONTAINER
+    const btnContainer = document.createElement("div");
+    btnContainer.className = "task-buttons";
+
     const del = document.createElement("button");
     del.textContent = "Delete";
-
     del.addEventListener("click", () => deleteTask(t.id));
 
     const toggle = document.createElement("button");
     toggle.textContent = "Toggle Status";
-
     toggle.addEventListener("click", () => {
       const newStatus = t.status === "done" ? "pending" : "done";
       updateTask(t.id, { ...t, status: newStatus });
     });
 
-    li.append(del, toggle);
+    btnContainer.append(del, toggle);
+    li.append(btnContainer);
+
     list.appendChild(li);
   });
+
+  
 }
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", loadTasks);
