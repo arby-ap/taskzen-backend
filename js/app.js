@@ -83,7 +83,7 @@ form.addEventListener("submit", (e) => {
   }
 
   const task = {
-    title: title,
+    title: form.title,value,
     description: form.description.value,
     priority: form.priority.value,
     status: form.status.value,
