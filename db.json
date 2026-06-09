@@ -1,13 +1,4 @@
 {
-  "tasks": [
-    {
-      "title": "Prep the Meal PreP",
-      "description": "prepare meal prep ingredients",
-      "priority": "medium",
-      "status": "pending",
-      "dueDate": "2026-06-06",
-      "id": "9xyuCDVqnVo"
-    }
-  ],
+  "tasks": [],
   "$schema": "./node_modules/json-server/schema.json"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "taskflow-api",
+  "name": "taskzen-api",
   "version": "1.0.0",
   "scripts": {
     "start": "json-server --watch db.json --host 0.0.0.0 --port $PORT"
